@@ -1,15 +1,12 @@
 import streamlit as st
 
-# Function to calculate GPA
 def calculate_gpa(grades, credit_hours):
     total_grade_points = sum(grade * credit for grade, credit in zip(grades, credit_hours))
     total_credit_hours = sum(credit_hours)
     gpa = total_grade_points / total_credit_hours
     return gpa
 
-
-# Streamlit app layout
-st.title("GPA Calculator")
+st.title("GPA Calculator ")
 num_courses = st.number_input("Number of Courses", min_value=1, step=1, value=1)
 
 grades = []
